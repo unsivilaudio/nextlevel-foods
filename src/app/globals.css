@@ -9,8 +9,28 @@
         height: 100vh;
     }
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        @apply font-display;
+    }
+
+    h1 {
+        @apply text-5xl font-semibold;
+    }
+
+    h2 {
+        @apply text-3xl font-bold;
+    }
+
+    h3 {
+        @apply text-2xl font-bold;
+    }
+
     body {
-        background: linear-gradient(180deg, #232029, #231e2d);
+        background: radial-gradient(#282c34, #282c34);
         color: #ddd8e4;
     }
 }

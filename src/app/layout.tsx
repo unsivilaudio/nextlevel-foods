@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import MainHeader from '@/layout/MainHeader';
 
 export const metadata: Metadata = {
     title: 'NextLevel Food',
@@ -14,8 +15,9 @@ export default function RootLayout({
     return (
         <html lang='en'>
             <body>
-                <div className='header-background'>
+                <div className='absolute left-0 top-0 -z-10 h-[320px] w-full'>
                     <svg
+                        className='block h-auto w-full'
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 1440 320'
                     >
@@ -49,7 +51,7 @@ export default function RootLayout({
                         ></path>
                     </svg>
                 </div>
-
+                <MainHeader />
                 {children}
             </body>
         </html>
