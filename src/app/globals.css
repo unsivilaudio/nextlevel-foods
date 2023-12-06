@@ -41,6 +41,13 @@
         -webkit-text-fill-color: transparent;
     }
 
+    .error-text-gradient {
+        background: linear-gradient(90deg, #f9572a, #ffc905);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
     .animate-loader {
         animation: color-cycle 1s infinite;
     }
