@@ -60,6 +60,10 @@
         background-position-x: 100%;
         animation: gradient-switch 0.2s alternate ease-in-out;
     }
+
+    .animate-fade-slide-fb {
+        animation: fade-slide-in-from-bottom 0.3 forwards ease-out;
+    }
 }
 
 *,
@@ -88,5 +92,50 @@
     }
     100% {
         color: #e9e9e9;
+    }
+}
+
+@keyframes fade-slide-in-from-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-slide-in-from-right {
+    0% {
+        opacity: 0;
+        transform: translateX(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-slide-in-from-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flash {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
