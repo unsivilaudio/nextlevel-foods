@@ -33,6 +33,15 @@
         background: radial-gradient(#282c34, #282c34);
         color: #ddd8e4;
     }
+
+    .animate-bg-gradient {
+        background-size: 200% 100%;
+    }
+
+    .animate-bg-gradient:hover {
+        background-position-x: 100%;
+        animation: gradient-switch 0.2s alternate ease-in-out;
+    }
 }
 
 *,
@@ -41,4 +50,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+@keyframes gradient-switch {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 100%;
+    }
 }
