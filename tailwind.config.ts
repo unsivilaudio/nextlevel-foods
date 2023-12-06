@@ -5,8 +5,8 @@ const config: Config = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Open Sans', 'Arial', 'sans-serif'],
-                display: ['Poppins', 'Monospace', 'Helvetica'],
+                sans: ['Quicksand', 'Arial', 'sans-serif'],
+                display: ['Montserrat', 'Monospace', 'Helvetica'],
             },
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
