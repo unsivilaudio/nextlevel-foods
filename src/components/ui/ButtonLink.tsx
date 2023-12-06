@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
-type ButtonProps = {
+type ButtonLinkProps = {
     href: string;
     children: React.ReactNode;
 };
 
-export default function Button({ children, href }: ButtonProps) {
+export default function ButtonLink({ children, href }: ButtonLinkProps) {
     return (
         <Link
             href={href}
