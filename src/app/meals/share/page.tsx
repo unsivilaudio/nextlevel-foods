@@ -1,5 +1,8 @@
-import ImagePicker from '@/components/meals/ImagePicker';
 import clsx from 'clsx';
+
+import { shareMeal } from '@/actions/share-meal';
+import ImagePicker from '@/components/meals/ImagePicker';
+import MealsFormSubmit from '@/components/meals/MealsFormSubmit';
 
 export default function ShareMealPage() {
     return (
@@ -14,7 +17,10 @@ export default function ShareMealPage() {
                 <p>Or any other meal you feel needs sharing!</p>
             </header>
             <main className='mx-auto my-12 w-[90%] max-w-[75rem] text-white'>
-                <form className='mx-auto max-w-[50rem] space-y-4'>
+                <form
+                    className='mx-auto max-w-[50rem] space-y-4'
+                    action={shareMeal}
+                >
                     <div className='flex gap-4 [&>p]:w-full'>
                         <p>
                             <label
@@ -26,7 +32,7 @@ export default function ShareMealPage() {
                             <input
                                 type='text'
                                 id='name'
-                                name='name'
+                                name='creator'
                                 required
                                 className='block w-full rounded border border-[#454952] bg-[#1c2027] px-4 py-2 font-display text-lg text-[#ddd6cb]'
                             />
@@ -41,7 +47,7 @@ export default function ShareMealPage() {
                             <input
                                 type='email'
                                 id='email'
-                                name='email'
+                                name='creator_email'
                                 required
                                 className='block w-full rounded border border-[#454952] bg-[#1c2027] px-4 py-2 font-display text-lg text-[#ddd6cb]'
                             />
@@ -92,20 +98,9 @@ export default function ShareMealPage() {
                             className='block w-full rounded border border-[#454952] bg-[#1c2027] px-4 py-2 font-display text-lg text-[#ddd6cb]'
                         ></textarea>
                     </p>
-                    <ImagePicker name='image' />
-                    <p className='text-center'>
-                        <button
-                            type='submit'
-                            className={clsx(
-                                'rounded-sm border-none px-8 py-3 font-bold text-white duration-300 disabled:cursor-not-allowed disabled:bg-stone-400 disabled:text-stone-200',
-                                {
-                                    'animate-bg-gradient bg-gradient-to-r from-[#f9572a] from-[15%] to-[#ff9b05] to-[50%]':
-                                        true,
-                                },
-                            )}
-                        >
-                            Share Meal
-                        </button>
+                    <ImagePicker label='Your Meal' name='image' />
+                    <p className='flex justify-end text-center'>
+                        <MealsFormSubmit />
                     </p>
                 </form>
             </main>

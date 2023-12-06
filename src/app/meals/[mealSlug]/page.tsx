@@ -8,6 +8,18 @@ type MealDetailsPageProps = {
     };
 };
 
+export async function generateMetadata({ params }: MealDetailsPageProps) {
+    const meal = getMeal(params.mealSlug);
+    if (!meal) {
+        notFound();
+    }
+
+    return {
+        title: meal.title,
+        description: meal.summary,
+    };
+}
+
 export default function MealDetailsPage({ params }: MealDetailsPageProps) {
     const meal = getMeal(params.mealSlug);
 

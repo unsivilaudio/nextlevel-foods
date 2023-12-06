@@ -1,6 +1,11 @@
 import ImageSlideshow from '@/components/images/SlideShow';
 import Link from 'next/link';
 
+export const metadata = {
+    title: 'All Meals',
+    description: 'Browser the delicious meals shared by our vibrant community.',
+};
+
 export default function Home() {
     return (
         <>
