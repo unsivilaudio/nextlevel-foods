@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 import logoImg from '@/assets/logo.png';
 import MainHeaderBG from '@/layout/MainHeaderBG';
+import NavLink from '@/components/nav/NavLink';
 
 export default function MainHeader() {
     return (
@@ -27,20 +28,12 @@ export default function MainHeader() {
                 <nav>
                     <ul className='flex gap-6 text-lg'>
                         <li>
-                            <Link
-                                href='/meals'
-                                className='hover:text-shadow-[0_0_18px_rgba(248,190,42,0.8)] rounded-md px-4 py-2 font-bold text-[#ddd6cb] duration-200 hover:bg-gradient-to-r hover:from-[#ff8a05] hover:to-[#f9b331] hover:bg-clip-text hover:text-transparent active:bg-gradient-to-r active:from-[#ff8a05] active:to-[#f9b331] active:bg-clip-text active:text-transparent'
-                            >
-                                Browse Meals
-                            </Link>
+                            <NavLink href='/meals'>Browse Meals</NavLink>
                         </li>
                         <li>
-                            <Link
-                                href='/community'
-                                className='hover:text-shadow-[0_0_18px_rgba(248,190,42,0.8)] rounded-md px-4 py-2 font-bold text-[#ddd6cb] duration-200 hover:bg-gradient-to-r hover:from-[#ff8a05] hover:to-[#f9b331] hover:bg-clip-text hover:text-transparent active:bg-gradient-to-r active:from-[#ff8a05] active:to-[#f9b331] active:bg-clip-text active:text-transparent'
-                            >
-                                Community
-                            </Link>
+                            <NavLink href='/community'>
+                                Foodies Community
+                            </NavLink>
                         </li>
                     </ul>
                 </nav>

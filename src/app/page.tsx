@@ -1,3 +1,4 @@
+import ImageSlideshow from '@/components/images/SlideShow';
 import Link from 'next/link';
 
 export default function Home() {
@@ -5,11 +6,11 @@ export default function Home() {
         <>
             <header className='mx-auto my-12 flex max-w-[75rem] gap-12'>
                 <div className='flex h-[25rem] w-[40rem] items-center justify-center'>
-                    <p>The SlideShow</p>
+                    <ImageSlideshow />
                 </div>
                 <div className='space-y-4'>
                     <div className='space-y-6 text-xl text-[#ddd6cb]'>
-                        <h1 className='bg-gradient-to-r from-[#f9572a] to-[#ffc905] bg-clip-text font-display text-4xl font-bold uppercase text-transparent'>
+                        <h1 className='highlight-text-gradient font-display text-4xl font-bold uppercase text-transparent'>
                             NextLevel Food for NextLevel Foodies
                         </h1>
                         <p>Taste & share food from all over the world.</p>
