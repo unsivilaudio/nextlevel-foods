@@ -13,7 +13,7 @@ export async function getMeals(): Promise<Meal[]> {
     return db.prepare<Meal[]>('SELECT * FROM meals').all() as Meal[];
 }
 
-export function getMeal(slug: string): Meal {
+export async function getMeal(slug: string): Promise<Meal> {
     return db.prepare('SELECT * FROM meals WHERE slug = ?').get(slug) as Meal;
 }
 
